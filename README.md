@@ -27,6 +27,9 @@
 10. В Arduino IDE установить драйвер Firebase через ```Sketch > Include Library > Add .ZIP Library...```
 
 ## Второй этап. Сборка схемы.
+
+![Схема для FirebaseRoom_ESP8266](/firebase ESP workshop_bb.png "Схема для FirebaseRoom_ESP8266")
+
 1. Взять набор
  * Модуль ESP8266
  * Макетная плата
