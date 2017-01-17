@@ -21,7 +21,7 @@
 4. Открыть ```Boards manager``` из меню ```Tools > Board```
 5. В окне найти ```esp8266``` и установить (надо скачать порядка 150Мб). 
 6. После этого вы можете программировать платы, основанные на чипе esp8266. Более подробно об ПО для esp8266 можно почитать [тут](https://github.com/esp8266/Arduino)
-7. [Скачать](http://mypractic.ru/downloads/rost/PL2303_Prolific_DriverInstaller_v1.12.0.exe) и установить драйвер для преобразователя USB-UART (для тех, у кого Windows). Для Mac установить вот [этот драйвер](https://github.com/changux/pl2303osx/raw/master/PL2303_Serial-USB_on_OSX_Lion.pkg). Для Linux драйвера уже включены в известные репозитории (Ubuntu, Debian и др.).
+7.  Установить драйвер для преобразователя USB-UART. Для Windows ([32-bit](http://www.ifamilysoftware.com/Drivers/PL-2303_Driver_Installer.exe), [64-bit](http://www.ifamilysoftware.com/Drivers/PL2303_64bit_Installer.exe)), для [Mac](https://github.com/changux/pl2303osx/raw/master/PL2303_Serial-USB_on_OSX_Lion.pkg), для Linux драйвера уже включены в известные репозитории (Ubuntu, Debian и др.).
 8. Скачать [zip-архив](https://github.com/firebase/firebase-arduino/archive/master.zip) репозитория с драйвером Firebase для Arduino 
 9. Удалить папку ```thing``` из директории ```/firebase-arduino-master/src/``` этого архива (из-за нее не компилируются программы, она нам не нужна сегодня)
 10. В Arduino IDE установить драйвер Firebase через ```Sketch > Include Library > Add .ZIP Library...```
