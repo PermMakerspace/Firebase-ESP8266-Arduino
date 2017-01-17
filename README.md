@@ -21,7 +21,7 @@
 4. Открыть ```Boards manager``` из меню ```Tools > Board```
 5. В окне найти ```esp8266``` и установить (надо скачать порядка 150Мб). 
 6. После этого вы можете программировать платы, основанные на чипе esp8266. Более подробно об ПО для esp8266 можно почитать [тут](https://github.com/esp8266/Arduino)
-7. [Скачать](http://mypractic.ru/downloads/rost/PL2303_Prolific_DriverInstaller_v1.12.0.exe) и установить драйвер для преобразователя USB-UART (для тех, у кого Windows) 
+7. [Скачать](http://mypractic.ru/downloads/rost/PL2303_Prolific_DriverInstaller_v1.12.0.exe) и установить драйвер для преобразователя USB-UART (для тех, у кого Windows). Для Mac установить вот [этот драйвер](https://github.com/changux/pl2303osx/raw/master/PL2303_Serial-USB_on_OSX_Lion.pkg). Для Linux драйвера уже включены в известные репозитории (Ubuntu, Debian и др.).
 8. Скачать [zip-архив](https://github.com/firebase/firebase-arduino/archive/master.zip) репозитория с драйвером Firebase для Arduino 
 9. Удалить папку ```thing``` из директории ```/firebase-arduino-master/src/``` этого архива (из-за нее не компилируются программы, она нам не нужна сегодня)
 10. В Arduino IDE установить драйвер Firebase через ```Sketch > Include Library > Add .ZIP Library...```
@@ -39,7 +39,6 @@
  * Провод USB
 2. Собрать схему под рисунку
 3. Подключить USB-UART к компьютеру. 
-4. Убедиться, что драйвера USB-UART установились корректно. В Диспетчере устройств Windows должен появиться ```Prolific ....``` в категории COM-порты. В linux - ```/dev/tty...```
 
 ## Третий этап. [Настройка Firebase](https://github.com/firebase/firebase-arduino/tree/master/examples/FirebaseRoom_ESP8266#configuration)
 1. Открыть пример ```File > Examples > FirebaseArduino > FirebaseRoom_ESP8266```
@@ -49,7 +48,7 @@
 5. Найти "секрет" базы данных (```⚙ > Project Settings > Database > Database secrets```) и заменить в программе ```FIREBASE_AUTH```
 6. Заменить ```pinMode(buttonPin, INPUT)``` на ```pinMode(buttonPin, INPUT_PULLUP)```
 7. Выбрать плату ```Generic ESP8266 Module``` в ```Board > ESP8266 Modules```
-8. Выбрать последовательный порт ```Port > /dev/tty...```
+8. Выбрать последовательный порт ```Tools > Port``` (```Port > /dev/tty...``` в Linux, ```/dev/cu.PL2303...``` в Mac, ```COM...``` в Windows)
 9. Установить скорость ```Upload Speed > 115200```
 10. Залить программу через ```Sketch > Upload```
 
